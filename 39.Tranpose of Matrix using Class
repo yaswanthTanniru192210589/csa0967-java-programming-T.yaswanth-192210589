@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Transpose{
+int mat[][];
+int a,b;
+public Transpose(int mat[][],int a,int b){
+this.mat=mat;
+this.a=a;
+this.b=b;
+}
+public void printmat(int mat[][]){
+int trans[][]=new int[a][b];
+for(int i=0;i<a;i++){
+for(int j=0;j<b;j++){
+trans[j][i]=mat[i][j];
+}
+}
+System.out.println(" the final transpose matrix :");
+for(int i=0;i<a;i++){
+System.out.println(" ");
+for(int j=0;j<b;j++){
+System.out.print(" "+trans[i][j]);
+}
+}
+}
+public static void main(String[]args){
+Scanner reader=new Scanner(System.in);
+System.out.print("enter no of rows:");
+int a=reader.nextInt();
+System.out.print(" enter no of coloumns:");
+int b=reader.nextInt();
+System.out.print(" enter the elements: ");
+int mat[][]=new int[a][b];
+for(int i=0;i<a;i++){
+for(int j=0;j<b;j++){
+mat[i][j]=reader.nextInt();
+}
+}
+Transpose m1=new Transpose(mat,a,b);
+m1.printmat(mat);
+}
+}
+

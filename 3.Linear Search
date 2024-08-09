@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class array{
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+System.out.print("enter the finding element:");
+int m=reader.nextInt();
+System.out.print("enter the size of array:");
+int n=reader.nextInt();
+int a[]=new int[n];
+int i;
+System.out.print("enter the elements: ");
+for(i=0;i<n;i++){
+a[i]=reader.nextInt();
+}
+int flag=0;
+int count=0;
+for(i=0;i<n;i++){
+if(a[i]==m){
+flag=i;
+count++;
+}
+}
+if(count>=0){
+System.out.println("finded at position:"+flag);
+}else{
+System.out.println("not");
+}
+}
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class sum{
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+int n=reader.nextInt();
+int i,j,sum=0;
+int count1=0,count2=0;
+int arr[]=new int[n];
+for(i=0;i<n;i++){
+arr[i]=reader.nextInt();
+}
+int count=Integer.MAX_VALUE;
+for(i=0;i<n;i++){
+for(j=i+1;j<n;j++){
+sum=arr[i]+arr[j];
+if(sum<count){
+count=sum;
+count1=arr[i];
+count2=arr[j];
+}
+}
+}
+System.out.println("the values are:"+count1+","+count2);
+}
+}

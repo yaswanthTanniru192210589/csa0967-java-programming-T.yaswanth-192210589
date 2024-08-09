@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class armstrong{
+
+	public static void main(String[] args) 
+	{
+		Scanner reader=new Scanner(System.in);
+int n=reader.nextInt();
+int count=0,rem=0,tem=0;
+int n1=n;
+double sum=0;
+int n2=n;
+while(n!=0){
+rem=n%10;
+count++;
+n=n/10;
+}
+while(n1!=0){
+tem=n1%10;
+sum=sum+Math.pow(tem,count);
+n1=n1/10;
+		}
+System.out.println("sum is="+sum);
+if(sum==n2){
+System.out.println("it is armstong number");
+		}else{
+System.out.println("not Armstrong");
+	}
+}
+}

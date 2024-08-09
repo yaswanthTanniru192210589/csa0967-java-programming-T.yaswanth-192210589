@@ -1,0 +1,12 @@
+import java.util.Scanner;
+class sqcu{
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+System.out.println("enter number");
+int n=reader.nextInt();
+int m=0,h=0;
+m=n*n;
+System.out.println("square"+m);
+h=n*n*n;
+System.out.println("cube"+h);
+}}

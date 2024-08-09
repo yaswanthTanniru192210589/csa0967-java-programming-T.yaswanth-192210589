@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class marks{
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+System.out.println("enter the marks in python:");
+int p=reader.nextInt();
+int sum=0;
+sum=sum+p;
+System.out.println("enter the marks in c programming:");
+int c=reader.nextInt();
+sum+=c;
+System.out.println("enter the marks in Mathematics:");
+int m=reader.nextInt();
+sum+=m;
+System.out.println("enter the marks in Physics:");
+int ph=reader.nextInt();
+sum+=ph;
+System.out.println("Total marks: "+sum);
+float a=sum/4f;
+System.out.println("Aggregate : "+a+"%");
+if(a>=75){
+System.out.println("DISTINCTION");
+}else if(a>=60 && a<75){
+System.out.println("First Division");
+}else if(a>=50 && a<60){
+System.out.println("Secound Division");
+}else if(a>=40 && a<50){
+System.out.println("Third Division");
+}else{
+System.out.println("Fail");
+}
+}
+}

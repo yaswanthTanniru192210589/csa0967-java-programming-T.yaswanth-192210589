@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Area{
+int length,breath,radius,side;
+public Area(int length,int breath,int side,int radius){
+this.length=length;
+this.breath=breath;
+this.side=side;
+this.radius=radius;
+}
+public void printrecarea(){
+int area=length*breath;
+System.out.println("the area of rectangle is:"+area);
+}
+public void printsqarea(){
+int area=side*side;
+System.out.println("the area of square is:"+area);
+}
+public void printperameter(){
+int perameter=2*(length+breath);
+System.out.println("the perameter of rectangle is:"+perameter);
+}
+public void printsqparameter(){
+int perameter=4*side;
+System.out.println("the perameter of square is:"+perameter);
+}
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+int length=5;
+int breath=4;
+int side=4;
+int radius=5;
+Area p1=new Area(length,breath,side,radius);
+p1.printrecarea();
+p1.printsqarea();
+p1.printperameter();
+p1.printsqparameter();
+}
+}

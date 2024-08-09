@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class MMM{
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+System.out.println("enter the size of array :");
+int n=reader.nextInt();
+int arr[]=new int[n];
+int mid=n/2;
+int sum=0,i,j,count=0,max=0;
+System.out.println("enter the elements :");
+for(i=0;i<n;i++){
+arr[i]=reader.nextInt();
+}
+int maxv=0;
+for(i=0;i<n-1;i++){
+for(j=0;j<n-1-i;j++){
+if(arr[j]>arr[j+1]){
+int temp=arr[j];
+arr[j]=arr[j+1];
+arr[j+1]=temp;
+}
+}
+}
+for(i=0;i<n;i++){
+sum=sum+arr[i];
+if(i==mid){
+System.out.println("median="+arr[i]);
+}
+}
+System.out.println("mean="+sum/n);
+for(i=0;i<n;i++){
+count=0;
+for(j=0;j<n;j++){
+if(arr[i]==arr[j]){
+count++;
+}
+if(count>max){
+max=count;
+maxv=arr[i];
+}
+}
+}
+System.out.println("mode="+max);
+}
+}
+

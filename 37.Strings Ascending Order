@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class strings{
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+int n=reader.nextInt();
+reader.nextLine();
+int i;
+String names[]=new String[n]; 
+for(i=0;i<n;i++){
+names[i]=reader.nextLine();
+}
+for(i=0;i<n;i++){
+for(int j=0;j<n-1-i;j++){
+if(names[j].compareTo(names[j+1])>0){
+String temp=names[j];
+names[j]=names[j+1];
+names[j+1]=temp;
+}
+}
+}
+for(i=0;i<n;i++){
+System.out.print("  "+names[i]);
+}
+}
+}

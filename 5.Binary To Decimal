@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class bintodec{
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+int n=reader.nextInt();
+int b=2;
+double sum=0;
+int i=0;
+while(n!=0){
+int rem=n%10;
+sum=sum+(Math.pow(b,i)*rem);
+n=n/10;
+i=i+1;
+}
+System.out.print("the decimal numberis: "+sum);
+}
+}

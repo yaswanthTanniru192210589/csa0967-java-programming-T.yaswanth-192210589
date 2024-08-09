@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class RomanNumerals {
+
+    public static void main(String[] args) {
+Scanner reader=new Scanner(System.in);
+        int number = reader.nextInt(); 
+        String[] thousands = {"", "M", "MM", "MMM"};
+        String[] hundreds = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
+        String[] tens = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+        String[] ones = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+
+        String romanNumeral = thousands[number / 1000] +
+                              hundreds[(number % 1000) / 100] +
+                              tens[(number % 100) / 10] +
+                              ones[number % 10];
+
+        System.out.println("Roman numeral for " + number + " is " + romanNumeral);
+    }
+}

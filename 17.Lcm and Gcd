@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class lcmandgcd{
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+System.out.println("enter the numbers");
+int n=reader.nextInt();
+int m=reader.nextInt();
+int a=n;
+int b=m;
+while(m!=0){
+int temp=m;
+m=n%m;
+n=temp;}
+
+System.out.println("gcd is:"+n);
+int lcm=a*b/n;
+System.out.println("lcm is:"+lcm);
+}
+}

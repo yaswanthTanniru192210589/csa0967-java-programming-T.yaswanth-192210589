@@ -1,0 +1,9 @@
+import java.util.Scanner;
+public class merge{
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+String n=reader.nextLine();
+String m=reader.nextLine();
+System.out.println("the merged string is: "+n+m);
+}
+}

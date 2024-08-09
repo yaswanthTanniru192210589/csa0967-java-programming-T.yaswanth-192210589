@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Calculator{
+char n;
+int a,b,c;
+public Calculator(char n,int a,int b){
+this.n=n;
+this.a=a;
+this.b=b;
+}
+public int cal(){
+if(n=='*'){
+c=a*b;
+}else if(n=='+'){
+c=a+b;
+}else if(n=='-'){
+c=a-b;
+}else if(n=='/'){
+c=a/b;
+}else{
+System.out.println("it is not resonable operator");
+c=0;
+}
+return c;
+}
+public void printcal(){
+System.out.println("the result :"+cal());
+}
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+int a=reader.nextInt();
+int b=reader.nextInt();
+System.out.println("Give the operator:");
+char n=reader.next().charAt(0);
+Calculator c1=new Calculator(n,a,b);
+c1.printcal();
+}
+}

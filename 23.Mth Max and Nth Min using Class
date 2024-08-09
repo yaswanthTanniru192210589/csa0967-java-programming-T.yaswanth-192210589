@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class MaxandMin{
+int arr[],m,n,a;
+public MaxandMin(int arr[],int m,int n,int a){
+this.arr=arr;
+this.m=m;
+this.n=n;
+this.a=a;
+}
+public void maxandmin(){
+for(int i=0;i<a-1;i++){
+for(int j=0;j<a-1-i;j++){
+if(arr[j]>arr[j+1]){
+int temp=arr[j];
+arr[j]=arr[j+1];
+arr[j+1]=temp;
+}
+}
+}
+System.out.println("the min:"+arr[n-1]);
+System.out.println("the max:"+arr[a-m]);
+}
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+System.out.println("enter size of arr:");
+int a=reader.nextInt();
+System.out.println("enter min elements:");
+int n=reader.nextInt();
+System.out.println("enter max elements:");
+int m=reader.nextInt();
+int arr[]=new int[a];
+System.out.println("enter elements:");
+for(int i=0;i<a;i++){
+arr[i]=reader.nextInt();
+}
+MaxandMin m1=new MaxandMin(arr,m,n,a);
+m1.maxandmin();
+}
+}
+
+

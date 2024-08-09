@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class revalp{
+public static void main(String[] args){
+Scanner reader=new Scanner(System.in);
+String n=reader.nextLine();
+int a=n.length();
+String r="";
+for(char i='A';i<='Z';i++){
+for(int j=0;j<a;j++){
+char ch=n.charAt(j);
+if(i==ch){
+System.out.print(i);
+break;
+}
+}
+}
+
+}
+}
